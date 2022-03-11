@@ -9,7 +9,7 @@ const path=require("path")
 const cors=require("cors")
 const fs = require('fs')
 var xss = require("xss")
-const admin=require("./router/admin")
+
 
 
 
@@ -51,17 +51,11 @@ app.set("view engine","ejs")
 app.use(express.static(path.join(__dirname,"build")))
 
 
-/*if (process.env.NODE_ENV === "production") {
-	app.get("/",(req,res)=>{
-		app.use(express.static(__dirname+"/build"))
-		res.sendFile(path.join(__dirname+"/build/index.html"))
-	})
 
-}*/
-/*app.get("/",(req,res)=>{
+app.get("/",(req,res)=>{
 	app.use(express.static(__dirname+"/build"))
 	res.sendFile(path.join(__dirname+"/build/index.html"))
-})*/
+})
 
 app.get("/:sala",(req,res)=>{
 
