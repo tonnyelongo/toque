@@ -25,14 +25,6 @@ app.use(session({ secret: 'keyboard cat',
   })
 );
 
-/*
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : '',
-	database : 'almadb'
-});
-*/
 
 
 var storage=multer.diskStorage({
